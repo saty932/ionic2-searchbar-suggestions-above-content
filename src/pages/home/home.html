@@ -1,0 +1,63 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-title text-center>
+			Searching
+		</ion-title>
+	</ion-navbar>
+	<ion-toolbar color="primary">	
+		<ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterItems()">
+		</ion-searchbar>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content no-padding>
+	<ion-grid ion-fixed no-padding>
+		<ion-list  style="position: absolute;z-index:1;width:100%;">
+			<ion-item *ngFor="let item of filtereditems" color="silver" >
+				{{item.title}}
+			</ion-item>
+		</ion-list>
+	</ion-grid>
+	<ion-grid >
+		<ion-card>
+			<img src="../assets/imgs/background.png"/>
+			<ion-card-content>
+				<ion-card-title>
+					Nine Inch Nails Live
+				</ion-card-title>
+				<p>
+					The most popular industrial group ever, and largely
+					responsible for bringing the music to a mass audience.
+				</p>
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card>
+			<img src="../assets/imgs/background.png"/>
+			<ion-card-content>
+				<ion-card-title>
+					Nine Inch Nails Live
+				</ion-card-title>
+				<p>
+					The most popular industrial group ever, and largely
+					responsible for bringing the music to a mass audience.
+				</p>
+			</ion-card-content>
+		</ion-card>
+
+		<ion-card>
+			<img src="../assets/imgs/background.png"/>
+			<ion-card-content>
+				<ion-card-title>
+					Nine Inch Nails Live
+				</ion-card-title>
+				<p>
+					The most popular industrial group ever, and largely
+					responsible for bringing the music to a mass audience.
+				</p>
+			</ion-card-content>
+		</ion-card>
+
+	</ion-grid>	
+	
+</ion-content>
